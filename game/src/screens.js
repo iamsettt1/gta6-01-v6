@@ -47,9 +47,16 @@ export function drawTitleScreen(S, ctx, W, H) {
   const prog = S.progress || {};
   let income = 0;
   try { income = empireIncomePerHour(S) || 0; } catch (e) { income = 0; }
-  ctx.fillStyle = '#38e0c8';
   ctx.font = '700 14px system-ui, sans-serif';
-  ctx.fillText(`RESPECT Lv ${prog.respectLevel || 0} · MISSIONS ${(prog.missionsDone || []).length}/10 · EMPIRE $${income}/h · TERRITORY ${(prog.territoryTaken || []).length}/3 · SHELLS ${prog.shellsFound || 0}/12 · $${(prog.cash || 0).toLocaleString('en-US')}`, W / 2, 264);
+  const statsText = `RESPECT Lv ${prog.respectLevel || 0} · MISSIONS ${(prog.missionsDone || []).length}/10 · EMPIRE $${income}/h · TERRITORY ${(prog.territoryTaken || []).length}/3 · SHELLS ${prog.shellsFound || 0}/12 · $${(prog.cash || 0).toLocaleString('en-US')}`;
+  const statsW = ctx.measureText(statsText).width + 28;
+  ctx.fillStyle = 'rgba(10,16,28,0.45)';
+  ctx.beginPath();
+  if (ctx.roundRect) ctx.roundRect(W / 2 - statsW / 2, 255, statsW, 24, 12);
+  else ctx.rect(W / 2 - statsW / 2, 255, statsW, 24);
+  ctx.fill();
+  ctx.fillStyle = '#38e0c8';
+  ctx.fillText(statsText, W / 2, 272);
 
   ctx.font = '600 14px system-ui, sans-serif';
   ctx.fillStyle = 'rgba(230,242,248,0.9)';
