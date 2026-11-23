@@ -178,7 +178,7 @@ function stageEmpire(S) {
 
 function stageTitle(S) {
   S.screen = 'title';
-  S.dayT = 17.6; // golden hour for the orbit behind the menu
+  S.dayT = 17.7; // golden hour for the orbit behind the menu
   S.weather.storm = 0.1;
   // A run worth showing on the stats strip: six jobs done, a foothold
   // in the empire, cash in hand. baseProgress(…, 150) lands respect

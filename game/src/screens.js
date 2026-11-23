@@ -49,8 +49,8 @@ export function drawTitleScreen(S, ctx, W, H) {
   try { income = empireIncomePerHour(S) || 0; } catch (e) { income = 0; }
   ctx.font = '700 14px system-ui, sans-serif';
   const statsText = `RESPECT Lv ${prog.respectLevel || 0} · MISSIONS ${(prog.missionsDone || []).length}/10 · EMPIRE $${income}/h · TERRITORY ${(prog.territoryTaken || []).length}/3 · SHELLS ${prog.shellsFound || 0}/12 · $${(prog.cash || 0).toLocaleString('en-US')}`;
-  const statsW = ctx.measureText(statsText).width + 28;
-  ctx.fillStyle = 'rgba(10,16,28,0.45)';
+  const statsW = ctx.measureText(statsText).width + 40;
+  ctx.fillStyle = 'rgba(10,16,28,0.5)';
   ctx.beginPath();
   if (ctx.roundRect) ctx.roundRect(W / 2 - statsW / 2, 255, statsW, 24, 12);
   else ctx.rect(W / 2 - statsW / 2, 255, statsW, 24);

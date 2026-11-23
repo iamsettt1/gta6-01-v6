@@ -6,6 +6,8 @@
 
 **Puerto Brisa 3D — Storm Surge.** A 3D open-world crime game in the browser, built on a hand-written WebGL1 renderer — no engine, no library, no network requests. Rosa Camacho works for fixer Tomás Ibarra against the Herrera family across eight districts and two bridges: ten story missions, a wanted system with named LPD response units and a KITE-1 helicopter, a plannable vault heist, four buyable businesses, a bounty board, a race league, territory wars, taxi fares, twelve hidden shells, and a storm — La Madre — rolling in over the water.
 
+The eight districts, west to east: El Mirador's old-town plazas, the Avenida Coral boulevard, the working Puerto Brisa Marina, painted Barrio Iris, beachfront Playa Brisa, the dry Las Lomas hills, the Zona Libre free port, and smugglers' Isla Ancla across the channel.
+
 The storm is not decoration: the Storm Surge meter climbs steadily as the day wears on, and when La Madre makes landfall the harbour districts flood, standing water slows every car that ploughs through it, and the vault heist pays out more to crews bold enough to run it in the wet.
 
 ## Run it
