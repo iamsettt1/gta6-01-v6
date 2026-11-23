@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Puerto Brisa 3D — Storm Surge</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #0a141f; }
+  canvas { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+  #hud { pointer-events: none; }
+  /* Read aloud, never shown: the status line screen readers announce. */
+  #status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+</style>
+</head>
+<body>
+<canvas id="gl" width="1280" height="800" aria-label="Puerto Brisa 3D: a 3D open-world crime game. Drive with WASD, E to enter cars and talk, F to fire."></canvas>
+<canvas id="hud" width="1280" height="800"></canvas>
+<p id="status" role="status" aria-live="polite"></p>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
